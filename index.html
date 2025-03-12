@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Angelo & Alma - 2 Agosto 2025</title>
     <style>
         :root {
@@ -11,7 +11,7 @@
             --accent-color: #38a93e;
             --text-color: #333;
         }
-        
+
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -19,14 +19,17 @@
             margin: 0;
             padding: 0;
             background-color: var(--secondary-color);
+            -webkit-text-size-adjust: 100%;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
+            box-sizing: border-box;
+            width: 100%;
         }
-        
+
         header {
             background-color: var(--primary-color);
             color: white;
@@ -34,56 +37,62 @@
             padding: 40px 0;
             margin-bottom: 30px;
         }
-        
+
         h1 {
             font-size: 3em;
             margin: 0;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        
+
         .date {
             font-size: 1.5em;
             margin: 10px 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-        
+
         .countdown {
             font-size: 1.2em;
             margin: 20px 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             font-weight: bold;
         }
-        
+
         section {
             background-color: white;
             border-radius: 10px;
-            padding: 30px;
+            padding: 20px;
             margin-bottom: 30px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            box-sizing: border-box;
         }
-        
+
         h2 {
             color: var(--accent-color);
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
             margin-top: 0;
         }
-        
+
         .details {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            width: 100%;
         }
-        
+
         .detail-card {
-            flex: 1;
-            min-width: 250px;
+            flex: 1 1 100%;
+            min-width: 200px;
+            max-width: 100%;
             background-color: var(--secondary-color);
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             position: relative;
+            box-sizing: border-box;
+            width: 100%;
         }
-        
+
         .detail-card h3 {
             margin-top: 0;
             color: var(--accent-color);
@@ -103,15 +112,15 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        
+
         .map-button:hover {
             background-color: var(--primary-color);
         }
-        
+
         .map-button svg {
             margin-right: 8px;
         }
-        
+
         .map {
             height: 400px;
             background-color: #e1e1e1;
@@ -121,14 +130,14 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
             margin: 20px 0;
         }
-        
+
         .gallery-img {
             height: 200px;
             background-color: #e1e1e1;
@@ -139,7 +148,7 @@
             background-size: cover;
             background-position: center;
         }
-        
+
         .rsvp-form {
             display: flex;
             flex-direction: column;
@@ -154,7 +163,7 @@
             border-radius: 4px;
             font-family: inherit;
         }
-        
+
         button {
             background-color: var(--accent-color);
             color: white;
@@ -165,11 +174,11 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        
+
         button:hover {
             background-color: var(--primary-color);
         }
-        
+
         footer {
             text-align: center;
             padding: 20px;
@@ -177,7 +186,7 @@
             color: white;
             margin-top: 30px;
         }
-        
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -186,11 +195,43 @@
             .details {
                 flex-direction: column;
             }
+            
+            .detail-card {
+                width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+            
+            section {
+                padding: 15px;
+                width: 100%;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            p, li {
+                font-size: 1em;
+            }
+            
+            a[href^="mailto:"], a[href^="https://wa.me/"] {
+                display: block;
+                margin: 10px 0;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            
+            a[href^="mailto:"] {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <header style="background-image: url('foto1.jpeg'); background-size: cover; background-position: center; position: relative;">
+    <header style="background-image: url('foto3.jpeg'); background-size: cover; background-position: center; position: relative;">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(46, 125, 50, 0.5);"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h1>Angelo & Alma</h1>
@@ -245,9 +286,16 @@
                 <div class="detail-card">
                     <h3>Alloggi</h3>
                     <p>Se avete bisogno di alloggiare nelle vicinanze, non esitate a farcelo sapere e saremo lieti di ospitarvi in una delle seguenti strutture.</p>
-                    <p><strong>Hotel Splendid:</strong> Via Topi 78, Castel Topone</p>
-                    <p><strong>B&B La Rosa:</strong> Via Druidi 15, Topolinia</p>
-                    <a href="https://maps.app.goo.gl/f4CrSw4H6HRoNdnW6" class="map-button">
+                    <p><strong>Hotel The Queen:</strong> Via Casilina 78, Pastorano (CE)</p>
+                    <a href="https://maps.app.goo.gl/EGZd82PtaqJ8th638" class="map-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Vedi su Google Maps
+                    </a>
+                    <p><strong>B&B Terra Muronis:</strong> Via Druidi 15, Castel Morrone (CE)</p>
+                    <a href="https://maps.app.goo.gl/EGZd82PtaqJ8th638" class="map-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
