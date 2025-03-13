@@ -194,6 +194,42 @@
             color: white;
             margin-top: 30px;
         }
+        
+                /* Stile per la freccia di scroll */
+                .scroll-arrow {
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .scroll-arrow svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+            filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Nasconde la freccia quando si scorre */
+        .scroll-arrow.hidden {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
 
         @media (max-width: 768px) {
             
@@ -263,6 +299,7 @@
         }
     </style>
 </head>
+
 <body>
     <header style="background-image: url('foto8.jpeg'); background-size: cover; background-position: center; position: relative; height: 100vh; overflow: hidden; transition: opacity 0.3s ease;">
         <div class="container" style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -270,12 +307,18 @@
             <p class="date" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">2 Agosto 2025</p>
             <div class="countdown" id="countdown" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Mancano: <span id="days">...</span> giorni</div>
         </div>
+                <!-- Freccia animata per lo scroll -->
+                <div class="scroll-arrow" id="scrollArrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                    </svg>
+                </div>
     </header>
     
     <div class="container">
         
         <section id="cerimonia">
-            <h2>Appuntamenti e indicazioni</h2>
+            <h2>Appuntamento</h2>
             <div class="details">
                 <div class="detail-card">
                     <h3>Cerimonia</h3>
