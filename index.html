@@ -138,6 +138,8 @@
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s;
+            font-family: var(--body-font); /* Aggiungi solo questa riga */
+            font-size: 1em; /* Aggiungi solo questa riga */
         }
 
         .map-button:hover {
@@ -215,18 +217,20 @@
         }
 
         @media (max-width: 768px) {
-            .countdown .date {
-                font-size: 1em;
+            .countdown, .date {  /* Corretto da .countdown .date */
+                font-size: 2em;
             }
             
-            .h2 {
-                font-size: 1em;
+            h2 {  /* Corretto da .h2 */
+                font-size: 2em;
+                line-height: 1.2;
             }
             
-            .h3 {
-                font-size: 1em;
+            h3 {  /* Corretto da .h3 */
+                font-size: 1.5em;
             }
 
+            /* Resto del media query invariato */
             .details {
                 flex-direction: column;
             }
@@ -236,6 +240,11 @@
                 min-width: 0;
                 box-sizing: border-box;
                 margin-bottom: 10px;
+            }
+            
+            /* Aggiungi questa regola per ridurre lo spazio sopra i pulsanti solo in mobile */
+            .map-button {
+                margin-top: 5px;
             }
             
             section {
@@ -248,7 +257,7 @@
             }
             
             p, li {
-                font-size: 0.8em;
+                font-size: 0.9em; /* Leggermente aumentato da 0.8em per leggibilità */
             }
             
             a[href^="mailto:"], a[href^="https://wa.me/"] {
