@@ -229,12 +229,11 @@
     </style>
 </head>
 <body>
-    <header style="background-image: url('foto4.jpeg'); background-size: cover; background-position: center; position: relative;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(46, 125, 50, 0.5);"></div>
-        <div class="container" style="position: relative; z-index: 1;">
-            <h1>Angelo & Alma</h1>
-            <p class="date">2 Agosto 2025</p>
-            <div class="countdown" id="countdown">Mancano: <span id="days">...</span> giorni</div>
+    <header style="background-image: url('foto4.jpeg'); background-size: cover; background-position: center; position: relative; height: 100vh; overflow: hidden; transition: opacity 0.3s ease;">
+        <div class="container" style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Angelo & Alma</h1>
+            <p class="date" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">2 Agosto 2025</p>
+            <div class="countdown" id="countdown" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Mancano: <span id="days">...</span> giorni</div>
         </div>
     </header>
     
@@ -320,33 +319,39 @@
                 <li>Numero di persone</li>
                 <li>Eventuali intolleranze alimentari</li>
             </ul>
-            <a href="https://wa.me/393493908610?text=Ciao%20Angelo%20e%20Alma%2C%0A%0AConfermiamo%20la%20nostra%20partecipazione%20al%20vostro%20matrimonio.%0A%0ANomi%3A%20%0ANumero%20di%20persone%3A%20%0AIntolleranze%20alimentari%3A%20%0A%0AGrazie%21" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 10px; fill: white;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                </svg>
-                Messaggio ad Angelo
-            </a>
-            <p> </p>
-            <a href="https://wa.me/393401543467?text=Ciao%20Angelo%20e%20Alma%2C%0A%0AConfermiamo%20la%20nostra%20partecipazione%20al%20vostro%20matrimonio.%0A%0ANomi%3A%20%0ANumero%20di%20persone%3A%20%0AIntolleranze%20alimentari%3A%20%0A%0AGrazie%21" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 10px; fill: white;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                </svg>
-                Messaggio ad Alma
-            </a>
-            <p> </p>
             <a href="mailto:almaeangelo@gmail.com?subject=Conferma%20partecipazione%20matrimonio&body=Ciao%20Angelo%20e%20Alma%2C%0A%0AConfermiamo%20la%20nostra%20partecipazione%20al%20vostro%20matrimonio.%0A%0ANomi%3A%20%0ANumero%20di%20persone%3A%20%0AIntolleranze%20alimentari%3A%20%0A%0AGrazie%21" style="display: inline-flex; align-items: center; background-color: #4285F4; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em; margin-left: 0px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 10px; fill: white;">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                Conferma via Email
+                Scriveteci
             </a>
         </section>
         
         <section id="contatti">
             <h2>Contatti</h2>
             <p>Per qualsiasi domanda o informazione, non esitate a contattarci:</p>
-            <p><strong>Angelo:</strong> 3493908610 | sabino.ang@gmail.com</p>
-            <p><strong>Alma:</strong> 3401543467 | diture.alma@gmail.com</p>
+            <p><strong>Angelo:</strong> 3493908610</p>
+            <a href="https://wa.me/393493908610" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 0px; fill: white;">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+            </a>
+            <a href="tel:+393494908610" style="display: inline-flex; align-items: center; background-color: #007AFF; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em; margin-left: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 0px; fill: white;">
+                    <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+                </svg>
+            </a>
+            <p><strong>Alma:</strong> 3401543467</p>
+            <a href="https://wa.me/393401543467" style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 0px; fill: white;">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+            </a>
+            <a href="tel:+393401543467" style="display: inline-flex; align-items: center; background-color: #007AFF; color: white; padding: 15px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1em; margin-left: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 0px; fill: white;">
+                    <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+                </svg>
+            </a>
         </section>
     </div>
     
@@ -392,6 +397,37 @@
             // Esegui ogni ora
             setInterval(updateCountdown, 3600000);
         });
+
+        window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        
+        // Calcola l'opacità in base alla posizione di scroll
+        // Inizia a sbiadire quando iniziamo a scorrere
+        const opacity = Math.max(0.3, 1 - (scrollPosition / (windowHeight * 0.5)));
+        
+        // Applica l'opacità all'header
+        header.style.opacity = opacity;
+        
+        // Se stiamo scrollando, rendi l'header fisso sullo sfondo
+        if (scrollPosition > 0) {
+            header.style.position = 'fixed';
+            header.style.top = '0';
+            header.style.left = '0';
+            header.style.width = '100%';
+            header.style.zIndex = '-1'; // Posiziona dietro il contenuto
+            document.body.style.paddingTop = windowHeight + 'px'; // Aggiungi padding per compensare l'header fisso
+        } else {
+            header.style.position = 'relative';
+            header.style.zIndex = '0';
+            document.body.style.paddingTop = '0';
+        }
+    });
+    
+    // Esegui lo script anche al caricamento della pagina
+    window.dispatchEvent(new Event('scroll'));
+
     </script>
 </body>
 </html>
