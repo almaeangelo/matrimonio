@@ -10,7 +10,7 @@
     <style>
         :root {
             --primary-color: #55ce9c;
-            --secondary-color: #f5f5f5;
+            --secondary-color: #f5f5f5a9;
             --accent-color: #55ce9c;
             --text-color: #333;
             --subtitle-font: 'Tangerine', serif;
@@ -215,10 +215,14 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
+            .countdown .date {
+                font-size: 1em;
             }
             
+            .h2 .h3 {
+                font-size: 1em;
+            }
+
             .details {
                 flex-direction: column;
             }
@@ -240,7 +244,7 @@
             }
             
             p, li {
-                font-size: 1em;
+                font-size: 0.8em;
             }
             
             a[href^="mailto:"], a[href^="https://wa.me/"] {
@@ -267,7 +271,7 @@
     <div class="container">
         
         <section id="cerimonia">
-            <h2>Appuntamento e come raggiungerci</h2>
+            <h2>Appuntamenti e indicazioni</h2>
             <div class="details">
                 <div class="detail-card">
                     <h3>Cerimonia</h3>
@@ -306,9 +310,11 @@
                         Vedi su Google Maps
                     </a>
                 </div>
-                
-                <div class="detail-card">
-                    <h3>Alloggi</h3>
+            </div>
+        </section>
+
+        <section id="cerimonia">
+            <h2>Alloggi</h2>
                     <p>Se avete bisogno di alloggiare nelle vicinanze, non esitate a farcelo sapere: saremo lieti di ospitarvi in una delle seguenti strutture.</p>
                     <p><strong>Hotel The Queen</strong></br>Via Casilina km 191</br>Pastorano (CE)</p>
                     <a href="https://maps.app.goo.gl/EGZd82PtaqJ8th638" class="map-button">
@@ -326,8 +332,6 @@
                         </svg>
                         Vedi su Google Maps
                     </a>
-                </div>
-            </div>
         </section>
         
         <section id="lista-nozze">
