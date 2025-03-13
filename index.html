@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Angelo & Alma - 2 Agosto 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #50c985;
             --secondary-color: #f5f5f5;
             --accent-color: #38a93e;
             --text-color: #333;
+            --subtitle-font: 'Tangerine', serif;
+            --title-font: 'Tangerine', serif;
+            --body-font: 'Bodoni Moda', serif;
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: var(--body-font);
             line-height: 1.6;
             color: var(--text-color);
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             background-color: var(--secondary-color);
             -webkit-text-size-adjust: 100%;
+            font-size: 19px;
         }
 
         .container {
@@ -38,23 +45,47 @@
             margin-bottom: 30px;
         }
 
+        p {
+            font-size: 1.5em; /* Aumentato da 1em (o non specificato) */
+            font-family: 'Bodoni Moda', serif; /* Usa un carattere diverso da Tangerine per il testo */
+            margin-top: 0.5rem; /* Spazio controllato sopra i paragrafi */
+            margin-bottom: 0.5rem; /* Spazio controllato sotto i paragrafi */
+        }   
+
         h1 {
-            font-size: 3em;
+            font-family: var(--title-font);
+            font-size: 5em;
             margin: 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-family: var(--subtitle-font);
+            font-size: 3em;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 1rem !important; /* Forza un margine inferiore fisso */
+            margin-top: 0;
         }
 
         .date {
-            font-size: 1.5em;
-            margin: 10px 0;
+            font-family: var(--subtitle-font);
+            font-size: 3em;
+            margin: 15px 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
         }
 
         .countdown {
-            font-size: 1.2em;
-            margin: 20px 0;
+            font-family: var(--subtitle-font);
+            font-size: 3em;
+            margin: 10px 0;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         section {
@@ -65,13 +96,6 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             width: 100%;
             box-sizing: border-box;
-        }
-
-        h2 {
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-top: 0;
         }
 
         .details {
@@ -94,6 +118,9 @@
         }
 
         .detail-card h3 {
+            font-family: var(--subtitle-font);
+            font-size: 3em;
+            margin-bottom: 0.8rem !important; /* Forza un margine inferiore fisso */
             margin-top: 0;
             color: var(--accent-color);
         }
@@ -244,8 +271,8 @@
             <div class="details">
                 <div class="detail-card">
                     <h3>Cerimonia</h3>
-                    <p><strong>Ore:</strong> 16:00</p>
-                    <p><strong>Luogo:</strong> Chiesa Ave Gratia Plena - Piazza P. Bronzetti - Castel Morrone</p>
+                    <p><strong>Orario</strong></br>16:00</p>
+                    <p><strong>Luogo</strong></br>Chiesa Ave Gratia Plena</br>Piazza P. Bronzetti</br>Castel Morrone</p>
                     <a href="https://maps.app.goo.gl/qCpt8BaZgwWxVVRA6" class="map-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -257,8 +284,8 @@
                 
                 <div class="detail-card">
                     <h3>Ricevimento</h3>
-                    <p><strong>Ore:</strong> 18:00</p>
-                    <p><strong>Luogo:</strong> Casale dei Mascioni, Via Mascioni, Squille di Castel Campagnano (CE)</p>
+                    <p><strong>Orario</strong></br>18:00</p>
+                    <p><strong>Luogo</strong></br>Casale dei Mascioni</br>Via Mascioni</br>Squille di Castel Campagnano (CE)</p>
                     <a href="https://maps.app.goo.gl/R7UwwgbD7S3qUELq5" class="map-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -283,7 +310,7 @@
                 <div class="detail-card">
                     <h3>Alloggi</h3>
                     <p>Se avete bisogno di alloggiare nelle vicinanze, non esitate a farcelo sapere: saremo lieti di ospitarvi in una delle seguenti strutture.</p>
-                    <p><strong>Hotel The Queen:</strong> Via Casilina km 191, Pastorano (CE)</p>
+                    <p><strong>Hotel The Queen</strong></br>Via Casilina km 191</br>Pastorano (CE)</p>
                     <a href="https://maps.app.goo.gl/EGZd82PtaqJ8th638" class="map-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -291,7 +318,7 @@
                         </svg>
                         Vedi su Google Maps
                     </a>
-                    <p><strong>Algergo Diffuso Terra Muronis:</strong> Vico Pontevecchio 10, Castel Morrone (CE)</p>
+                    <p><strong>Albergo Diffuso Terra Muronis</strong></br>Vico Pontevecchio 10</br>Castel Morrone (CE)</p>
                     <a href="https://maps.app.goo.gl/TuyjqABrWDM78jJTA" class="map-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -306,8 +333,8 @@
         <section id="lista-nozze">
             <h2>Il nostro viaggio</h2>
             <p>Il vostro affetto e la vostra presenza sono i regali più grandi per noi. Se desiderate comunque contribuire al nostro viaggio di nozze, potrete farlo utilizzando i seguenti riferimenti:</p>
-            <p><strong>IBAN:</strong> IT05V0100575040000000005620</p>
-            <p><strong>Intestatari:</strong> Angelo Sabino (oppure) Alma Iolanda Di Ture</p>
+            <p><strong>IBAN</strong></br>IT05V0100575040000000005620</p>
+            <p><strong>Intestatari</strong></br>Angelo Sabino</br>(oppure)</br>Alma Iolanda Di Ture</p>
         </section>
                 
         <section id="rsvp">
@@ -333,7 +360,7 @@
             
 <!-- Sostituisci il div che contiene i pulsanti di Angelo con questo: -->
 <div style="margin-bottom: 20px;">
-    <p style="margin-bottom: 10px;"><strong>Angelo:</strong> 3493908610</p>
+    <p style="margin-bottom: 10px;"><strong>Angelo</strong> 3493908610</p>
     <div style="display: flex; flex-direction: row; align-items: center;">
         <a href="https://wa.me/393493908610" style="display: flex; align-items: center; justify-content: center; background-color: #25D366; color: white; width: 50px; height: 50px; border-radius: 5px; text-decoration: none; margin-right: 10px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;">
@@ -350,7 +377,7 @@
 
 <!-- Sostituisci il div che contiene i pulsanti di Alma con questo: -->
 <div>
-    <p style="margin-bottom: 10px;"><strong>Alma:</strong> 3401543467</p>
+    <p style="margin-bottom: 10px;"><strong>Alma</strong> 3401543467</p>
     <div style="display: flex; flex-direction: row; align-items: center;">
         <a href="https://wa.me/393401543467" style="display: flex; align-items: center; justify-content: center; background-color: #25D366; color: white; width: 50px; height: 50px; border-radius: 5px; text-decoration: none; margin-right: 10px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: white;">
