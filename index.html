@@ -151,34 +151,6 @@
             margin-right: 8px;
         }
 
-        .map {
-            height: 400px;
-            background-color: #e1e1e1;
-            border-radius: 8px;
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .gallery-img {
-            height: 200px;
-            background-color: #e1e1e1;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-        }
-
         .rsvp-form {
             display: flex;
             flex-direction: column;
@@ -199,7 +171,8 @@
             color: white;
             border: none;
             padding: 12px;
-            font-size: 1em;
+            font-family: var(--body-font); /* Aggiungi solo questa riga */
+            font-size: 1em; /* Aggiungi solo questa riga */
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -330,7 +303,7 @@
         <section id="cerimonia">
             <h2>Alloggi</h2>
                     <p>Se avete bisogno di alloggiare nelle vicinanze, non esitate a farcelo sapere: saremo lieti di ospitarvi in una delle seguenti strutture.</p>
-                    <p></p>
+                    <p> </p>
                     <p><strong>Hotel The Queen</strong></br>Via Casilina km 191</br>Pastorano (CE)</p>
                     <a href="https://maps.app.goo.gl/EGZd82PtaqJ8th638" class="map-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -339,7 +312,7 @@
                         </svg>
                         Vedi su Google Maps
                     </a>
-                    <p></p>
+                    <p> </p>
                     <p><strong>Albergo Diffuso Terra Muronis</strong></br>Vico Pontevecchio 10</br>Castel Morrone (CE)</p>
                     <a href="https://maps.app.goo.gl/TuyjqABrWDM78jJTA" class="map-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
