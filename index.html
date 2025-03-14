@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #32ba81;
+            --primary-color: #3c613c;
+            --title-color: #67a55a;
             --secondary-color: #f5f5f5a9;
-            --accent-color: #32ba81;
             --text-color: #333;
             --subtitle-font: 'Tangerine', serif;
             --title-font: 'Tangerine', serif;
@@ -55,10 +55,9 @@
         h1 {
             font-family: var(--title-font);
             font-size: 5em;
-            font-weight: 800;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 1px;
             line-height: 1;
         }
@@ -67,7 +66,7 @@
             font-family: var(--subtitle-font);
             font-size: 3em;
             font-weight: 800;
-            color: var(--accent-color);
+            color: var(--primary-color);
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
             margin-bottom: 1rem !important; /* Forza un margine inferiore fisso */
@@ -127,14 +126,14 @@
             font-weight: 800;
             margin-bottom: 0.8rem !important; /* Forza un margine inferiore fisso */
             margin-top: 0;
-            color: var(--accent-color);
+            color: var(--primary-color);
             letter-spacing: 5px;
         }
 
         .map-button {
             display: inline-flex;
             align-items: center;
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
             color: white;
             border: none;
             padding: 8px 15px;
@@ -172,7 +171,7 @@
         }
 
         button {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
             color: white;
             border: none;
             padding: 12px;
@@ -190,7 +189,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
             color: white;
             margin-top: 30px;
         }
@@ -251,10 +250,12 @@
             h2 {  /* Corretto da .h2 */
                 font-size: 2em;
                 line-height: 1.2;
+                font-weight: 800;
             }
             
             h3 {  /* Corretto da .h3 */
                 font-size: 1.5em;
+                font-weight: 800;
             }
 
             /* Resto del media query invariato */
@@ -267,6 +268,7 @@
                 min-width: 0;
                 box-sizing: border-box;
                 margin-bottom: 10px;
+                font-weight: 800;
             }
             
             /* Aggiungi questa regola per ridurre lo spazio sopra i pulsanti solo in mobile */
@@ -303,9 +305,9 @@
 <body>
     <header style="background-image: url('foto12.jpeg'); background-size: cover; background-position: center; position: relative; height: 100vh; overflow: hidden; transition: opacity 0.3s ease;">
         <div class="container" style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Angelo</br>&</br>Alma</h1>
-            <p class="date" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">2 Agosto 2025</p>
-            <div class="countdown" id="countdown" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Mancano: <span id="days">...</span> giorni</div>
+            <h1 style="color: var(--title-color); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Angelo</br>&</br>Alma</h1>
+            <p class="date" style="color: var(--title-color); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">2 Agosto 2025</p>
+            <div class="countdown" id="countdown" style="color: var(--title-color); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Mancano: <span id="days">...</span> giorni</div>
         </div>
                 <!-- Freccia animata per lo scroll -->
                 <div class="scroll-arrow" id="scrollArrow">
