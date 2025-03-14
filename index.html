@@ -74,14 +74,6 @@
             letter-spacing: 5px;
         }
 
-        .date {
-            font-family: var(--subtitle-font);
-            font-size: 3em;
-            margin: 15px 0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            letter-spacing: 1px;
-        }
-
         .countdown {
             font-family: var(--subtitle-font);
             font-size: 3em;
@@ -243,7 +235,7 @@
                 top: -15vh;  /* Sposta il contenitore leggermente verso l'alto */
             }
 
-            .countdown, .date {  /* Corretto da .countdown .date */
+            .countdown {  /* Corretto da .countdown .date */
                 font-size: 2em;
                 font-weight: 800;
             }
@@ -309,8 +301,7 @@
         
         <div class="container" style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <h1 style="color: var(--title-color); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Angelo</br>&</br>Alma</h1>
-            <p class="date" style="margin-top: 30px; color: var(--title-color); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">2 Agosto 2025</p>
-            <div class="countdown" id="countdown" style="color: var(--title-color); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Mancano: <span id="days">...</span> giorni</div>
+            <div class="countdown" id="countdown" style="margin-top: 30px; color: var(--title-color); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">2 Agosto 2025</br>Mancano: <span id="days">...</span> giorni</div>
         </div>
         
         <!-- Freccia animata per lo scroll -->
