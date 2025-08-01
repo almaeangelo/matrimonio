@@ -455,31 +455,41 @@
         // Script per il countdown completamente riscritto
         document.addEventListener('DOMContentLoaded', function() {
             // Funzione di aggiornamento del countdown
-            function updateCountdown() {
-                // Data del matrimonio - formato YYYY-MM-DD
-                var weddingDate = new Date('2025-08-02');
-                // Imposta l'ora alle 16:00
-                weddingDate.setHours(16, 0, 0, 0);
-                
-                // Data corrente
-                var currentDate = new Date();
-                
-                // Differenza in millisecondi
-                var difference = weddingDate.getTime() - currentDate.getTime();
-                
-                // Se la data è già passata
-                if (difference < 0) {
-                    document.getElementById('countdown').innerHTML = "Il grande giorno è arrivato!";
-                    return;
-                }
-                
-                // Converti la differenza in giorni (arrotondando per difetto)
-                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                
-                // Aggiorna il testo nel DOM
-                document.getElementById('days').textContent = days;
-                console.log("Countdown aggiornato: " + days + " giorni");
-            }
+
+function updateCountdown() {
+    // Data del matrimonio - formato YYYY-MM-DD
+    var weddingDate = new Date('2025-08-02');
+    // Imposta l'ora alle 16:00
+    weddingDate.setHours(16, 0, 0, 0);
+    
+    // Data corrente
+    var currentDate = new Date();
+    
+    // Differenza in millisecondi
+    var difference = weddingDate.getTime() - currentDate.getTime();
+    
+    // Se la data è già passata
+    if (difference <= 0) {
+        document.getElementById('countdown').innerHTML = "Il grande giorno è arrivato!";
+        return;
+    }
+
+    var oneDay = 1000 * 60 * 60 * 24;
+    var oneHour = 1000 * 60 * 60;
+
+    if (difference < oneDay) {
+        // Mostra le ore rimanenti
+        var hours = Math.floor(difference / oneHour);
+        document.getElementById('countdown').innerHTML = `Manca meno di un giorno! Solo ${hours} ore!`;
+    } else {
+        // Mostra i giorni rimanenti
+        var days = Math.floor(difference / oneDay);
+        document.getElementById('days').textContent = days;
+        document.getElementById('countdown').innerHTML = `Mancano ${days} giorni al matrimonio!`;
+    }
+
+    console.log("Countdown aggiornato");
+}
             
             // Esegui subito
             updateCountdown();
