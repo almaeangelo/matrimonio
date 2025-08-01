@@ -470,22 +470,24 @@ function updateCountdown() {
     
     // Se la data è già passata
     if (difference <= 0) {
-        document.getElementById('countdown').innerHTML = "Il grande giorno è arrivato!";
+        document.getElementById('countdown').innerHTML = "";
         return;
     }
 
     var oneDay = 1000 * 60 * 60 * 24;
     var oneHour = 1000 * 60 * 60;
 
-    if (difference < oneDay) {
-        // Mostra le ore rimanenti
+    if (difference < oneHour * 24) {
+        // Meno di un giorno: mostra le ore
         var hours = Math.floor(difference / oneHour);
-        document.getElementById('countdown').innerHTML = `Manca meno di un giorno! Solo ${hours} ore!`;
+        document.getElementById('countdown').innerHTML = `Mancano ${hours} ore`;
+    } else if (difference < oneDay * 2) {
+        // Tra 1 e 2 giorni: mostra "Manca un giorno"
+        document.getElementById('countdown').innerHTML = "Manca un giorno";
     } else {
-        // Mostra i giorni rimanenti
+        // 2 o più giorni: mostra il numero di giorni
         var days = Math.floor(difference / oneDay);
-        document.getElementById('days').textContent = days;
-        document.getElementById('countdown').innerHTML = `Mancano ${days} giorni al matrimonio!`;
+        document.getElementById('countdown').innerHTML = `Mancano ${days} giorni`;
     }
 
     console.log("Countdown aggiornato");
